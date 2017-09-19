@@ -1,0 +1,23 @@
+{
+  "name": "gtip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --config nodemon.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/node": "^8.0.28",
+    "@types/node-fetch": "^1.6.7",
+    "chalk": "^2.1.0",
+    "node-fetch": "^1.7.3",
+    "vorpal": "^1.12.0"
+  }
+}
