@@ -5,7 +5,7 @@ declare module 'vorpal' {
     interface Vorpal {
         readonly command: (commandName: string, description?: string) => Vorpal;
         readonly autocomplete: (items: string[]) => Vorpal;
-        readonly option: (name: string) => void;
+        readonly option: (name: string, description: string) => Vorpal;
         readonly action: (callback: VorpalAction) => void;
         readonly delimiter: (delimiter: string) => Vorpal;
         readonly show: () => void;
