@@ -1,14 +1,16 @@
-#!/usr/bin/env node
 import * as Vorpal from 'vorpal';
 import { exec } from 'child_process';
 import { updateList } from './Update';
 import { readFileSync } from 'fs';
 import { yellow, green, red, grey } from 'chalk';
 import { ParsedTip } from './Types';
+import * as fuzzysearch from 'fuzzysearch';
+
 
 const tipsJSON = readFileSync('./tips.json', { encoding: 'utf-8' }).toString();
 const allTips: ParsedTip[] = JSON.parse(tipsJSON);
 const allGitCommands = allTips.map(tip => tip.command);
+const allTitles = allTips.map(tip => tip.title);
 
 const vorpal = Vorpal();
 
@@ -52,8 +54,25 @@ vorpal
 
 vorpal
     .command('search [query]')
-    .action(function (arg, callback) {
-        this.log(arg);
+    .option('-c', 'show only commands')
+    .action(function (arg: {query: string, options: {c: boolean} }, callback) {
+        const showOnlyCommand = arg.options && arg.options.c && (arg.options.c === true);
+        if (arg.query) {
+            let count = 0;
+            allTips.forEach((tip) => {
+                if (fuzzysearch(arg.query, tip.title)) {
+                    this.log(yellow(tip.command));
+                    if (!showOnlyCommand) {
+                        this.log(`description: ${tip.title}`);
+                        this.log(`command: ${tip.tip}\n`);
+                    }
+                    count++;
+                }
+            });
+            if(count > 0) {
+                this.log(green(`found ${count} tips`));
+            }
+        }
         callback();
     })
 
@@ -76,13 +95,18 @@ vorpal
     .command('run [command]', 'run specific git tip')
     .autocomplete(allGitCommands)
     .action(function (arg, callback) {
-        const gitCommand = allTips.find((command) => (command.command === arg.command));
-        this.log(`> ${gitCommand.title}`);
-        this.log(green(gitCommand.tip));
-        if (gitCommand) {
-            const paramValues = recurPropmpt(this, gitCommand, gitCommand.params, []);
+        console.log(arg);
+        if (arg.command) {
+            const gitCommand = allTips.find((command) => (command.command === arg.command));
+            if (gitCommand) {
+                this.log(`> ${gitCommand.title}`);
+                this.log(green(gitCommand.tip));
+                const paramValues = recurPropmpt(this, gitCommand, gitCommand.params, []);
+            } else {
+                this.log('Command doesn\'t exists');
+            }
         } else {
-            this.log('Command doesn\'t exists');
+            this.log(yellow('No command found'));
         }
         callback();
     });
