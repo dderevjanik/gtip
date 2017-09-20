@@ -1,15 +1,22 @@
 {
   "name": "gtip",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "CLI tool for git-tips",
+  "main": "dist/Index.js",
+  "repository": "https://github.com/dderevjanik/gtip",
+  "preferGlobal": true,
+  "bin": {
+    "gtip": "bin/gtip"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
     "start": "nodemon --config nodemon.json"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Derevjanik",
+  "license": "MIT",
   "devDependencies": {
+    "tldr": "^2.0.1",
     "typescript": "^2.5.2"
   },
   "dependencies": {

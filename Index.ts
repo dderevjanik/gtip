@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as Vorpal from 'vorpal';
 import { exec } from 'child_process';
 import { updateList } from './Update';
