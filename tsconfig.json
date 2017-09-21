@@ -6,7 +6,7 @@
     "lib": [
       "es2015",
       "es6"
-    ],                             /* Specify library files to be included in the compilation:  */
+    ], /* Specify library files to be included in the compilation:  */
     // "allowJs": true,                       /* Allow javascript files to be compiled. */
     // "checkJs": true,                       /* Report errors in .js files. */
     // "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
@@ -14,8 +14,8 @@
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    "outDir": "./dist",                        /* Redirect output structure to the directory. */
-    // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "./dist", /* Redirect output structure to the directory. */
+    "rootDir": "./lib", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "removeComments": true,                /* Do not emit comments to output. */
     // "noEmit": true,                        /* Do not emit outputs. */
     // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
@@ -50,7 +50,14 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
   },
   "files": [
-    "Index.ts"
+    "./lib/**/*.ts",
+    "./lib/**/.d.ts",
+    "./lib/global.d.ts"
+  ],
+  "files": [
+    "./lib/**/*.ts",
+    "./lib/**/.d.ts",
+    "./lib/global.d.ts"
   ],
   "exclude": [
     "node_modules"

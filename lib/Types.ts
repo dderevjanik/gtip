@@ -1,3 +1,9 @@
+export type NotParsedTip = Readonly<{
+    tip: string;
+    title: string;
+    alternative?: ReadonlyArray<string>;
+}>;
+
 export type ParsedTip = Readonly<{
     /**
      * Command Name

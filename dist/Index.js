@@ -18,7 +18,14 @@ function recurPropmpt(vorpal, gitCommand, parameters, result) {
             commandToExecute_1 = commandToExecute_1.replace(param, result[index]);
         });
         vorpal.log("executing: " + chalk_1.green(commandToExecute_1));
-        child_process_1.exec(commandToExecute_1);
+        child_process_1.exec(commandToExecute_1, function (err, stdout, stderr) {
+            if (err) {
+                vorpal.log(chalk_1.red(err.message));
+                return;
+            }
+            vorpal.log(stdout);
+            vorpal.log(stderr);
+        });
         return result;
     }
     vorpal.prompt({
@@ -53,7 +60,7 @@ vorpal
     if (arg.query) {
         var count_1 = 0;
         allTips.forEach(function (tip) {
-            if (fuzzysearch(arg.query, tip.title)) {
+            if (fuzzysearch(arg.query, tip.command.toLowerCase())) {
                 _this.log(chalk_1.yellow(tip.command));
                 if (!showOnlyCommand) {
                     _this.log("description: " + tip.title);
@@ -88,7 +95,6 @@ vorpal
     .command('run [command]', 'run specific git tip')
     .autocomplete(allGitCommands)
     .action(function (arg, callback) {
-    console.log(arg);
     if (arg.command) {
         var gitCommand = allTips.find(function (command) { return (command.command === arg.command); });
         if (gitCommand) {

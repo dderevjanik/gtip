@@ -7,5 +7,5 @@
     "ignore": [
         "node_modules"
     ],
-    "exec": "ts-node Index.ts"
+    "exec": "ts-node ./lib/Index.ts"
 }
