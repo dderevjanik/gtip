@@ -2,12 +2,14 @@
     {
         "command": "EverydayGitInTwentyCommandsOrSo",
         "params": [],
-        "title": "Everyday Git in twenty commands or so",
+        "alternative": [],
+        "title": "Dano",
         "tip": "git help everyday"
     },
     {
         "command": "ShowHelpfulGuidesThatComeWithGit",
         "params": [],
+        "alternative": [],
         "title": "Show helpful guides that come with Git",
         "tip": "git help -g"
     },
@@ -16,12 +18,14 @@
         "params": [
             "<a term in the source>"
         ],
+        "alternative": [],
         "title": "Search change by content",
         "tip": "git log -S'<a term in the source>'"
     },
     {
         "command": "SyncWithRemoteOverwriteLocalChanges",
         "params": [],
+        "alternative": [],
         "title": "Sync with remote, overwrite local changes",
         "tip": "git fetch origin && git reset --hard origin/master && git clean -f -d"
     },
@@ -30,18 +34,21 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "List of all files till a commit",
         "tip": "git ls-tree --name-only -r <commit-ish>"
     },
     {
         "command": "GitResetFirstCommit",
         "params": [],
+        "alternative": [],
         "title": "Git reset first commit",
         "tip": "git update-ref -d HEAD"
     },
     {
         "command": "ListAllTheConflictedFiles",
         "params": [],
+        "alternative": [],
         "title": "List all the conflicted files",
         "tip": "git diff --name-only --diff-filter=U"
     },
@@ -50,18 +57,21 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "List of all files changed in a commit",
         "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
     },
     {
         "command": "UnstagedChangesSinceLastCommit",
         "params": [],
+        "alternative": [],
         "title": "Unstaged changes since last commit",
         "tip": "git diff"
     },
     {
         "command": "ChangesStagedForCommit",
         "params": [],
+        "alternative": [],
         "title": "Changes staged for commit",
         "tip": "git diff --cached",
         "alternatives": [
@@ -71,18 +81,21 @@
     {
         "command": "ShowBothStagedAndUnstagedChanges",
         "params": [],
+        "alternative": [],
         "title": "Show both staged and unstaged changes",
         "tip": "git diff HEAD"
     },
     {
         "command": "ListAllBranchesThatAreAlreadyMergedIntoMaster",
         "params": [],
+        "alternative": [],
         "title": "List all branches that are already merged into master",
         "tip": "git branch --merged master"
     },
     {
         "command": "QuicklySwitchToThePreviousBranch",
         "params": [],
+        "alternative": [],
         "title": "Quickly switch to the previous branch",
         "tip": "git checkout -",
         "alternatives": [
@@ -92,6 +105,7 @@
     {
         "command": "RemoveBranchesThatHaveAlreadyBeenMergedWithMaster",
         "params": [],
+        "alternative": [],
         "title": "Remove branches that have already been merged with master",
         "tip": "git branch --merged master | grep -v '^\\*' | xargs -n 1 git branch -d",
         "alternatives": [
@@ -101,12 +115,14 @@
     {
         "command": "ListAllBranchesAndTheirUpstreamsAsWellAsLastCommitOnBranch",
         "params": [],
+        "alternative": [],
         "title": "List all branches and their upstreams, as well as last commit on branch",
         "tip": "git branch -vv"
     },
     {
         "command": "TrackUpstreamBranch",
         "params": [],
+        "alternative": [],
         "title": "Track upstream branch",
         "tip": "git branch -u origin/mybranch"
     },
@@ -115,6 +131,7 @@
         "params": [
             "<local_branchname>"
         ],
+        "alternative": [],
         "title": "Delete local branch",
         "tip": "git branch -d <local_branchname>"
     },
@@ -123,6 +140,7 @@
         "params": [
             "<remote_branchname>"
         ],
+        "alternative": [],
         "title": "Delete remote branch",
         "tip": "git push origin --delete <remote_branchname>",
         "alternatives": [
@@ -134,6 +152,7 @@
         "params": [
             "<tag-name>"
         ],
+        "alternative": [],
         "title": "Delete local tag",
         "tip": "git tag -d <tag-name>"
     },
@@ -142,6 +161,7 @@
         "params": [
             "<tag-name>"
         ],
+        "alternative": [],
         "title": "Delete remote tag",
         "tip": "git push origin :refs/tags/<tag-name>"
     },
@@ -150,6 +170,7 @@
         "params": [
             "<file_name>"
         ],
+        "alternative": [],
         "title": "Undo local changes with the last content in head",
         "tip": "git checkout -- <file_name>"
     },
@@ -158,6 +179,7 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "Revert: Undo a commit by creating a new commit",
         "tip": "git revert <commit-ish>"
     },
@@ -166,18 +188,21 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "Reset: Discard commits, advised for private branch",
         "tip": "git reset <commit-ish>"
     },
     {
         "command": "RewordThePreviousCommitMessage",
         "params": [],
+        "alternative": [],
         "title": "Reword the previous commit message",
         "tip": "git commit -v --amend"
     },
     {
         "command": "SeeCommitHistoryForJustTheCurrentBranch",
         "params": [],
+        "alternative": [],
         "title": "See commit history for just the current branch",
         "tip": "git cherry -v master"
     },
@@ -186,12 +211,14 @@
         "params": [
             "<email@address.com>"
         ],
+        "alternative": [],
         "title": "Amend author.",
         "tip": "git commit --amend --author='Author Name <email@address.com>'"
     },
     {
         "command": "ResetAuthorAfterAuthorHasBeenChangedInTheGlobalConfig",
         "params": [],
+        "alternative": [],
         "title": "Reset author, after author has been changed in the global config.",
         "tip": "git commit --amend --reset-author --no-edit"
     },
@@ -200,12 +227,14 @@
         "params": [
             "<URL>"
         ],
+        "alternative": [],
         "title": "Changing a remote's URL",
         "tip": "git remote set-url origin <URL>"
     },
     {
         "command": "GetListOfAllRemoteReferences",
         "params": [],
+        "alternative": [],
         "title": "Get list of all remote references",
         "tip": "git remote",
         "alternatives": [
@@ -215,30 +244,35 @@
     {
         "command": "GetListOfAllLocalAndRemoteBranches",
         "params": [],
+        "alternative": [],
         "title": "Get list of all local and remote branches",
         "tip": "git branch -a"
     },
     {
         "command": "GetOnlyRemoteBranches",
         "params": [],
+        "alternative": [],
         "title": "Get only remote branches",
         "tip": "git branch -r"
     },
     {
         "command": "StagePartsOfAChangedFileInsteadOfTheEntireFile",
         "params": [],
+        "alternative": [],
         "title": "Stage parts of a changed file, instead of the entire file",
         "tip": "git add -p"
     },
     {
         "command": "GetGitBashCompletion",
         "params": [],
+        "alternative": [],
         "title": "Get git bash completion",
         "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
     },
     {
         "command": "WhatChangedSinceTwoWeeks?",
         "params": [],
+        "alternative": [],
         "title": "What changed since two weeks?",
         "tip": "git log --no-merges --raw --since='2 weeks ago'",
         "alternatives": [
@@ -248,6 +282,7 @@
     {
         "command": "SeeAllCommitsMadeSinceForkingFromMaster",
         "params": [],
+        "alternative": [],
         "title": "See all commits made since forking from master",
         "tip": "git log --no-merges --stat --reverse master.."
     },
@@ -257,6 +292,7 @@
             "<branch-name>",
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "Pick commits across branches using cherry-pick",
         "tip": "git checkout <branch-name> && git cherry-pick <commit-ish>"
     },
@@ -265,6 +301,7 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "Find out branches containing commit-hash",
         "tip": "git branch -a --contains <commit-ish>",
         "alternatives": [
@@ -277,12 +314,14 @@
             "<handle>",
             "<command>"
         ],
+        "alternative": [],
         "title": "Git Aliases",
         "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
     },
     {
         "command": "SavingCurrentStateOfTrackedFilesWithoutCommiting",
         "params": [],
+        "alternative": [],
         "title": "Saving current state of tracked files without commiting",
         "tip": "git stash",
         "alternatives": [
@@ -292,6 +331,7 @@
     {
         "command": "SavingCurrentStateOfUnstagedChangesToTrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Saving current state of unstaged changes to tracked files",
         "tip": "git stash -k",
         "alternatives": [
@@ -302,6 +342,7 @@
     {
         "command": "SavingCurrentStateIncludingUntrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Saving current state including untracked files",
         "tip": "git stash -u",
         "alternatives": [
@@ -314,12 +355,14 @@
         "params": [
             "<message>"
         ],
+        "alternative": [],
         "title": "Saving current state with message",
         "tip": "git stash save <message>"
     },
     {
         "command": "SavingCurrentStateOfAllFiles(ignoredUntrackedAndTracked)",
         "params": [],
+        "alternative": [],
         "title": "Saving current state of all files (ignored, untracked, and tracked)",
         "tip": "git stash -a",
         "alternatives": [
@@ -330,6 +373,7 @@
     {
         "command": "ShowListOfAllSavedStashes",
         "params": [],
+        "alternative": [],
         "title": "Show list of all saved stashes",
         "tip": "git stash list"
     },
@@ -338,12 +382,14 @@
         "params": [
             "<stash@{n}>"
         ],
+        "alternative": [],
         "title": "Apply any stash without deleting from the stashed list",
         "tip": "git stash apply <stash@{n}>"
     },
     {
         "command": "ApplyLastStashedStateAndDeleteItFromStashedList",
         "params": [],
+        "alternative": [],
         "title": "Apply last stashed state and delete it from stashed list",
         "tip": "git stash pop",
         "alternatives": [
@@ -353,6 +399,7 @@
     {
         "command": "DeleteAllStoredStashes",
         "params": [],
+        "alternative": [],
         "title": "Delete all stored stashes",
         "tip": "git stash clear",
         "alternatives": [
@@ -365,6 +412,7 @@
             "<stash@{n}>",
             "<file_path>"
         ],
+        "alternative": [],
         "title": "Grab a single file from a stash",
         "tip": "git checkout <stash@{n}> -- <file_path>",
         "alternatives": [
@@ -374,18 +422,21 @@
     {
         "command": "ShowAllTrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Show all tracked files",
         "tip": "git ls-files -t"
     },
     {
         "command": "ShowAllUntrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Show all untracked files",
         "tip": "git ls-files --others"
     },
     {
         "command": "ShowAllIgnoredFiles",
         "params": [],
+        "alternative": [],
         "title": "Show all ignored files",
         "tip": "git ls-files --others -i --exclude-standard"
     },
@@ -396,6 +447,7 @@
             "<path>",
             "<start-point>"
         ],
+        "alternative": [],
         "title": "Create new working tree from a repository (git 2.5)",
         "tip": "git worktree add -b <branch-name> <path> <start-point>"
     },
@@ -404,6 +456,7 @@
         "params": [
             "<path>"
         ],
+        "alternative": [],
         "title": "Create new working tree from HEAD state",
         "tip": "git worktree add --detach <path> HEAD"
     },
@@ -412,6 +465,7 @@
         "params": [
             "<file_path>"
         ],
+        "alternative": [],
         "title": "Untrack files without deleting",
         "tip": "git rm --cached <file_path>",
         "alternatives": [
@@ -421,18 +475,21 @@
     {
         "command": "BeforeDeletingUntrackedFiles/directoryDoADryRunToGetTheListOfTheseFiles/directories",
         "params": [],
+        "alternative": [],
         "title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
         "tip": "git clean -n"
     },
     {
         "command": "ForcefullyRemoveUntrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Forcefully remove untracked files",
         "tip": "git clean -f"
     },
     {
         "command": "ForcefullyRemoveUntrackedDirectory",
         "params": [],
+        "alternative": [],
         "title": "Forcefully remove untracked directory",
         "tip": "git clean -f -d",
         "alternatives": [
@@ -442,6 +499,7 @@
     {
         "command": "UpdateAllTheSubmodules",
         "params": [],
+        "alternative": [],
         "title": "Update all the submodules",
         "tip": "git submodule foreach git pull",
         "alternatives": [
@@ -452,6 +510,7 @@
     {
         "command": "ShowAllCommitsInTheCurrentBranchYetToBeMergedToMaster",
         "params": [],
+        "alternative": [],
         "title": "Show all commits in the current branch yet to be merged to master",
         "tip": "git cherry -v master",
         "alternatives": [
@@ -463,6 +522,7 @@
         "params": [
             "<new-branch-name>"
         ],
+        "alternative": [],
         "title": "Rename a branch",
         "tip": "git branch -m <new-branch-name>",
         "alternatives": [
@@ -472,24 +532,28 @@
     {
         "command": "Rebases'feature'To'master'AndMergesItInToMaster",
         "params": [],
+        "alternative": [],
         "title": "Rebases 'feature' to 'master' and merges it in to master ",
         "tip": "git rebase master feature && git checkout master && git merge -"
     },
     {
         "command": "ArchiveThe`master`Branch",
         "params": [],
+        "alternative": [],
         "title": "Archive the `master` branch",
         "tip": "git archive master --format=zip --output=master.zip"
     },
     {
         "command": "ModifyPreviousCommitWithoutModifyingTheCommitMessage",
         "params": [],
+        "alternative": [],
         "title": "Modify previous commit without modifying the commit message",
         "tip": "git add --all && git commit --amend --no-edit"
     },
     {
         "command": "PrunesReferencesToRemoteBranchesThatHaveBeenDeletedInTheRemote",
         "params": [],
+        "alternative": [],
         "title": "Prunes references to remote branches that have been deleted in the remote.",
         "tip": "git fetch -p",
         "alternatives": [
@@ -499,6 +563,7 @@
     {
         "command": "RetrieveTheCommitHashOfTheInitialRevision",
         "params": [],
+        "alternative": [],
         "title": "Retrieve the commit hash of the initial revision.",
         "tip": " git rev-list --reverse HEAD | head -1",
         "alternatives": [
@@ -510,6 +575,7 @@
     {
         "command": "VisualizeTheVersionTree",
         "params": [],
+        "alternative": [],
         "title": "Visualize the version tree.",
         "tip": "git log --pretty=oneline --graph --decorate --all",
         "alternatives": [
@@ -519,6 +585,7 @@
     {
         "command": "DeployingGitTrackedSubfolderToGh-pages",
         "params": [],
+        "alternative": [],
         "title": "Deploying git tracked subfolder to gh-pages",
         "tip": "git subtree push --prefix subfolder_name origin gh-pages",
         "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
@@ -531,6 +598,7 @@
             "<username>",
             "<project_name>"
         ],
+        "alternative": [],
         "title": "Adding a project to repo using subtree",
         "tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
     },
@@ -542,6 +610,7 @@
             "<username>",
             "<project_name>"
         ],
+        "alternative": [],
         "title": "Get latest changes in your repo for a linked project using subtree",
         "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
     },
@@ -551,6 +620,7 @@
             "<file>",
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Export a branch with history to a file.",
         "tip": "git bundle create <file> <branch-name>"
     },
@@ -560,24 +630,28 @@
             "<repo-dir>",
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Import from a bundle",
         "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
     },
     {
         "command": "GetTheNameOfCurrentBranch",
         "params": [],
+        "alternative": [],
         "title": "Get the name of current branch.",
         "tip": "git rev-parse --abbrev-ref HEAD"
     },
     {
         "command": "IgnoreOneFileOnCommit(egChangelog)",
         "params": [],
+        "alternative": [],
         "title": "Ignore one file on commit (e.g. Changelog).",
         "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
     },
     {
         "command": "StashChangesBeforeRebasing",
         "params": [],
+        "alternative": [],
         "title": "Stash changes before rebasing",
         "tip": "git rebase --autostash"
     },
@@ -587,6 +661,7 @@
             "<id>",
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Fetch pull request by ID to a local branch",
         "tip": "git fetch origin pull/<id>/head:<branch-name>",
         "alternatives": [
@@ -596,12 +671,14 @@
     {
         "command": "ShowTheMostRecentTagOnTheCurrentBranch",
         "params": [],
+        "alternative": [],
         "title": "Show the most recent tag on the current branch.",
         "tip": "git describe --tags --abbrev=0"
     },
     {
         "command": "ShowInlineWordDiff",
         "params": [],
+        "alternative": [],
         "title": "Show inline word diff.",
         "tip": "git diff --word-diff"
     },
@@ -612,6 +689,7 @@
             "<commit2>",
             "<path>"
         ],
+        "alternative": [],
         "title": "Show changes using common diff tools.",
         "tip": "git difftool -t <commit1> <commit2> <path>"
     },
@@ -620,6 +698,7 @@
         "params": [
             "<file_name>"
         ],
+        "alternative": [],
         "title": "Don’t consider changes for tracked file.",
         "tip": "git update-index --assume-unchanged <file_name>"
     },
@@ -628,12 +707,14 @@
         "params": [
             "<file_name>"
         ],
+        "alternative": [],
         "title": "Undo assume-unchanged.",
         "tip": "git update-index --no-assume-unchanged <file_name>"
     },
     {
         "command": "CleanTheFilesFrom`gitignore`",
         "params": [],
+        "alternative": [],
         "title": "Clean the files from `.gitignore`.",
         "tip": "git clean -X -f"
     },
@@ -643,6 +724,7 @@
             "<deleting_commit>",
             "<file_path>"
         ],
+        "alternative": [],
         "title": "Restore deleted file.",
         "tip": "git checkout <deleting_commit>^ -- <file_path>"
     },
@@ -652,12 +734,14 @@
             "<commit-ish>",
             "<file_path>"
         ],
+        "alternative": [],
         "title": "Restore file to a specific commit-hash",
         "tip": "git checkout <commit-ish> -- <file_path>"
     },
     {
         "command": "AlwaysRebaseInsteadOfMergeOnPull",
         "params": [],
+        "alternative": [],
         "title": "Always rebase instead of merge on pull.",
         "tip": "git config --global pull.rebase true",
         "alternatives": [
@@ -667,24 +751,28 @@
     {
         "command": "ListAllTheAliasAndConfigs",
         "params": [],
+        "alternative": [],
         "title": "List all the alias and configs.",
         "tip": "git config --list"
     },
     {
         "command": "MakeGitCaseSensitive",
         "params": [],
+        "alternative": [],
         "title": "Make git case sensitive.",
         "tip": "git config --global core.ignorecase false"
     },
     {
         "command": "AddCustomEditors",
         "params": [],
+        "alternative": [],
         "title": "Add custom editors.",
         "tip": "git config --global core.editor '$EDITOR'"
     },
     {
         "command": "AutoCorrectTypos",
         "params": [],
+        "alternative": [],
         "title": "Auto correct typos.",
         "tip": "git config --global help.autocorrect 1"
     },
@@ -693,12 +781,14 @@
         "params": [
             "<SHA-1>"
         ],
+        "alternative": [],
         "title": "Check if the change was a part of a release.",
         "tip": "git name-rev --name-only <SHA-1>"
     },
     {
         "command": "DryRun(anyCommandThatSupportsDry-runFlagShouldDo)",
         "params": [],
+        "alternative": [],
         "title": "Dry run. (any command that supports dry-run flag should do.)",
         "tip": "git clean -fd --dry-run"
     },
@@ -707,12 +797,14 @@
         "params": [
             "<SHA-1>"
         ],
+        "alternative": [],
         "title": "Marks your commit as a fix of a previous commit.",
         "tip": "git commit --fixup <SHA-1>"
     },
     {
         "command": "SquashFixupCommitsNormalCommits",
         "params": [],
+        "alternative": [],
         "title": "Squash fixup commits normal commits.",
         "tip": "git rebase -i --autosquash"
     },
@@ -721,30 +813,35 @@
         "params": [
             "<file_path>"
         ],
+        "alternative": [],
         "title": "Skip staging area during commit.",
         "tip": "git commit --only <file_path>"
     },
     {
         "command": "InteractiveStaging",
         "params": [],
+        "alternative": [],
         "title": "Interactive staging.",
         "tip": "git add -i"
     },
     {
         "command": "ListIgnoredFiles",
         "params": [],
+        "alternative": [],
         "title": "List ignored files.",
         "tip": "git check-ignore *"
     },
     {
         "command": "StatusOfIgnoredFiles",
         "params": [],
+        "alternative": [],
         "title": "Status of ignored files.",
         "tip": "git status --ignored"
     },
     {
         "command": "CommitsInBranch1ThatAreNotInBranch2",
         "params": [],
+        "alternative": [],
         "title": "Commits in Branch1 that are not in Branch2",
         "tip": "git log Branch1 ^Branch2"
     },
@@ -753,6 +850,7 @@
         "params": [
             "<n>"
         ],
+        "alternative": [],
         "title": "List n last commits",
         "tip": "git log -<n>",
         "alternatives": [
@@ -762,24 +860,28 @@
     {
         "command": "ReuseRecordedResolutionRecordAndReusePreviousConflictsResolutions",
         "params": [],
+        "alternative": [],
         "title": "Reuse recorded resolution, record and reuse previous conflicts resolutions.",
         "tip": "git config --global rerere.enabled 1"
     },
     {
         "command": "OpenAllConflictedFilesInAnEditor",
         "params": [],
+        "alternative": [],
         "title": "Open all conflicted files in an editor.",
         "tip": "git diff --name-only | uniq | xargs $EDITOR"
     },
     {
         "command": "CountUnpackedNumberOfObjectsAndTheirDiskConsumption",
         "params": [],
+        "alternative": [],
         "title": "Count unpacked number of objects and their disk consumption.",
         "tip": "git count-objects --human-readable"
     },
     {
         "command": "PruneAllUnreachableObjectsFromTheObjectDatabase",
         "params": [],
+        "alternative": [],
         "title": "Prune all unreachable objects from the object database.",
         "tip": "git gc --prune=now --aggressive"
     },
@@ -790,12 +892,14 @@
             "<port>",
             "<browser>"
         ],
+        "alternative": [],
         "title": "Instantly browse your working repository in gitweb.",
         "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
     },
     {
         "command": "ViewTheGPGSignaturesInTheCommitLog",
         "params": [],
+        "alternative": [],
         "title": "View the GPG signatures in the commit log",
         "tip": "git log --show-signature"
     },
@@ -804,6 +908,7 @@
         "params": [
             "<entry-name>"
         ],
+        "alternative": [],
         "title": "Remove entry in the global config.",
         "tip": "git config --global --unset <entry-name>"
     },
@@ -812,6 +917,7 @@
         "params": [
             "<branch_name>"
         ],
+        "alternative": [],
         "title": "Checkout a new branch without any history",
         "tip": "git checkout --orphan <branch_name>"
     },
@@ -821,36 +927,42 @@
             "<branch_name>",
             "<file_name>"
         ],
+        "alternative": [],
         "title": "Extract file from another branch.",
         "tip": "git show <branch_name>:<file_name>"
     },
     {
         "command": "ListOnlyTheRootAndMergeCommits",
         "params": [],
+        "alternative": [],
         "title": "List only the root and merge commits.",
         "tip": "git log --first-parent"
     },
     {
         "command": "ChangePreviousTwoCommitsWithAnInteractiveRebase",
         "params": [],
+        "alternative": [],
         "title": "Change previous two commits with an interactive rebase.",
         "tip": "git rebase --interactive HEAD~2"
     },
     {
         "command": "ListAllBranchIsWIP",
         "params": [],
+        "alternative": [],
         "title": "List all branch is WIP",
         "tip": "git checkout master && git branch --no-merged"
     },
     {
         "command": "FindGuiltyWithBinarySearch",
         "params": [],
+        "alternative": [],
         "title": "Find guilty with binary search",
         "tip": "git bisect start                    # Search start \ngit bisect bad                      # Set point to bad commit \ngit bisect good v2.6.13-rc2         # Set point to good commit|tag \ngit bisect bad                      # Say current state is bad \ngit bisect good                     # Say current state is good \ngit bisect reset                    # Finish search \n"
     },
     {
         "command": "BypassPre-commitAndCommit-msgGithooks",
         "params": [],
+        "alternative": [],
         "title": "Bypass pre-commit and commit-msg githooks",
         "tip": "git commit --no-verify"
     },
@@ -859,6 +971,7 @@
         "params": [
             "<file_path>"
         ],
+        "alternative": [],
         "title": "List commits and changes to a specific file (even through renaming)",
         "tip": "git log --follow -p -- <file_path>"
     },
@@ -867,6 +980,7 @@
         "params": [
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Clone a single branch",
         "tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
     },
@@ -875,6 +989,7 @@
         "params": [
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Create and switch new branch",
         "tip": "git checkout -b <branch-name>",
         "alternatives": [
@@ -884,12 +999,14 @@
     {
         "command": "IgnoreFileModeChangesOnCommits",
         "params": [],
+        "alternative": [],
         "title": "Ignore file mode changes on commits",
         "tip": "git config core.fileMode false"
     },
     {
         "command": "TurnOffGitColoredTerminalOutput",
         "params": [],
+        "alternative": [],
         "title": "Turn off git colored terminal output",
         "tip": "git config --global color.ui false"
     },
@@ -899,24 +1016,28 @@
             "<specific command e.g branch, diff>",
             "<true, false or always>"
         ],
+        "alternative": [],
         "title": "Specific color settings",
         "tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
     },
     {
         "command": "ShowAllLocalBranchesOrderedByRecentCommits",
         "params": [],
+        "alternative": [],
         "title": "Show all local branches ordered by recent commits",
         "tip": "git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
     },
     {
         "command": "FindLinesMatchingThePattern(regexOrString)InTrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Find lines matching the pattern (regex or string) in tracked files",
         "tip": "git grep --heading --line-number 'foo bar'"
     },
     {
         "command": "CloneAShallowCopyOfARepository",
         "params": [],
+        "alternative": [],
         "title": "Clone a shallow copy of a repository",
         "tip": "git clone https://github.com/user/repo.git --depth 1"
     },
@@ -925,6 +1046,7 @@
         "params": [
             "<given-text>"
         ],
+        "alternative": [],
         "title": "Search Commit log across all branches for given text",
         "tip": "git log --all --grep='<given-text>'"
     },
@@ -933,6 +1055,7 @@
         "params": [
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Get first commit in a branch (from master)",
         "tip": "git log master..<branch-name> --oneline | tail -1"
     },
@@ -941,6 +1064,7 @@
         "params": [
             "<file-name>"
         ],
+        "alternative": [],
         "title": "Unstaging Staged file",
         "tip": "git reset HEAD <file-name>"
     },
@@ -950,6 +1074,7 @@
             "<remote-name>",
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Force push to Remote Repository",
         "tip": "git push -f <remote-name> <branch-name>"
     },
@@ -959,6 +1084,7 @@
             "<remote-nickname>",
             "<remote-url>"
         ],
+        "alternative": [],
         "title": "Adding Remote name",
         "tip": "git remote add <remote-nickname> <remote-url>"
     },
@@ -967,12 +1093,14 @@
         "params": [
             "<file-name>"
         ],
+        "alternative": [],
         "title": "Show the author, time and last revision made to each line of a given file",
         "tip": "git blame <file-name>"
     },
     {
         "command": "GroupCommitsByAuthorsAndTitle",
         "params": [],
+        "alternative": [],
         "title": "Group commits by authors and title",
         "tip": "git shortlog"
     },
@@ -982,12 +1110,14 @@
             "<remote-name>",
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Forced push but still ensure you don't overwrite other's work",
         "tip": "git push --force-with-lease <remote-name> <branch-name>"
     },
     {
         "command": "ShowHowManyLinesDoesAnAuthorContribute",
         "params": [],
+        "alternative": [],
         "title": "Show how many lines does an author contribute",
         "tip": "git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s removed lines: %s total lines: %s\n\", add, subs, loc }' -",
         "alternatives": [
@@ -999,6 +1129,7 @@
         "params": [
             "<commit-ish>"
         ],
+        "alternative": [],
         "title": "Revert: Reverting an entire merge",
         "tip": "git revert -m 1 <commit-ish>"
     },
@@ -1007,24 +1138,28 @@
         "params": [
             "<branch-name>"
         ],
+        "alternative": [],
         "title": "Number of commits in a branch",
         "tip": "git rev-list --count <branch-name>"
     },
     {
         "command": "AliasGitUndo",
         "params": [],
+        "alternative": [],
         "title": "Alias: git undo",
         "tip": "git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'"
     },
     {
         "command": "AddObjectNotes",
         "params": [],
+        "alternative": [],
         "title": "Add object notes",
         "tip": "git notes add -m 'Note on the previous commit....'"
     },
     {
         "command": "ShowAllTheGit-notes",
         "params": [],
+        "alternative": [],
         "title": "Show all the git-notes",
         "tip": "git log --show-notes='*'"
     },
@@ -1034,24 +1169,28 @@
             "<source-dir>",
             "<SHA1>"
         ],
+        "alternative": [],
         "title": "Apply commit from another repository",
         "tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
     },
     {
         "command": "SpecificFetchReference",
         "params": [],
+        "alternative": [],
         "title": "Specific fetch reference",
         "tip": "git fetch origin master:refs/remotes/origin/mymaster"
     },
     {
         "command": "FindCommonAncestorOfTwoBranches",
         "params": [],
+        "alternative": [],
         "title": "Find common ancestor of two branches",
         "tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
     },
     {
         "command": "ListUnpushedGitCommits",
         "params": [],
+        "alternative": [],
         "title": "List unpushed git commits",
         "tip": "git log --branches --not --remotes",
         "alternatives": [
@@ -1062,12 +1201,14 @@
     {
         "command": "AddEverythingButWhitespaceChanges",
         "params": [],
+        "alternative": [],
         "title": "Add everything, but whitespace changes",
         "tip": "git diff --ignore-all-space | git apply --cached"
     },
     {
         "command": "Edit[local/global]GitConfig",
         "params": [],
+        "alternative": [],
         "title": "Edit [local/global] git config",
         "tip": "git config [--global] --edit"
     },
@@ -1077,6 +1218,7 @@
             "<start>",
             "<end>"
         ],
+        "alternative": [],
         "title": "blame on certain range",
         "tip": "git blame -L <start>,<end>"
     },
@@ -1085,54 +1227,63 @@
         "params": [
             "<variable>"
         ],
+        "alternative": [],
         "title": "Show a Git logical variable.",
         "tip": "git var -l | <variable>"
     },
     {
         "command": "PreformattedPatchFile",
         "params": [],
+        "alternative": [],
         "title": "Preformatted patch file.",
         "tip": "git format-patch -M upstream..topic"
     },
     {
         "command": "GetTheRepoName",
         "params": [],
+        "alternative": [],
         "title": "Get the repo name.",
         "tip": "git rev-parse --show-toplevel"
     },
     {
         "command": "LogsBetweenDateRange",
         "params": [],
+        "alternative": [],
         "title": "logs between date range",
         "tip": "git log --since='FEB 1 2017' --until='FEB 14 2017'"
     },
     {
         "command": "ExcludeAuthorFromLogs",
         "params": [],
+        "alternative": [],
         "title": "Exclude author from logs",
         "tip": "git log --perl-regexp --author='^((?!excluded-author-regex).*)$'"
     },
     {
         "command": "GeneratesASummaryOfPendingChanges",
         "params": [],
+        "alternative": [],
         "title": "Generates a summary of pending changes",
         "tip": "git request-pull v1.0 https://git.ko.xz/project master:for-linus"
     },
     {
         "command": "ListReferencesInARemoteRepository",
         "params": [],
+        "alternative": [],
         "title": "List references in a remote repository",
         "tip": "git ls-remote git://git.kernel.org/pub/scm/git/git.git"
     },
     {
         "command": "BackupUntrackedFiles",
         "params": [],
+        "alternative": [],
         "title": "Backup untracked files.",
         "tip": "git ls-files --others -i --exclude-standard | xargs zip untracked.zip"
     },
     {
         "command": "ListAllGitAliases",
         "params": [],
+        "alternative": [],
         "title": "List all git aliases",
         "tip": "git config -l | grep alias | sed 's/^alias\\.//g'",
         "alternatives": [
@@ -1142,12 +1293,14 @@
     {
         "command": "ShowGitStatusShort",
         "params": [],
+        "alternative": [],
         "title": "Show git status short",
         "tip": "git status --short --branch"
     },
     {
         "command": "CheckoutACommitPriorToADayAgo",
         "params": [],
+        "alternative": [],
         "title": "Checkout a commit prior to a day ago",
         "tip": "git checkout master@{yesterday}"
     },
@@ -1156,6 +1309,7 @@
         "params": [
             "<branch_name>"
         ],
+        "alternative": [],
         "title": "Push a new local branch to remote repository and track",
         "tip": "git push -u origin <branch_name>"
     }

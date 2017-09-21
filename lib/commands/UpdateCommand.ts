@@ -4,8 +4,8 @@ import { red, green } from 'chalk';
 
 export const updateCommand = (vorpal: Vorpal, allTips: ParsedTip[]) =>
     vorpal
-        .command('update', 'update git tips')
-        .action(function (arg, callback) {
+        .command('update', 'Update git tips from git-tips repo')
+        .action(function (_, callback) {
             this.log('updating git tips...');
             try {
                 updateList();

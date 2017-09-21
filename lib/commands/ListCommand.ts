@@ -3,8 +3,8 @@ import { yellow } from 'chalk';
 
 export const listCommand = (vorpal: Vorpal, allTips: ParsedTip[]) =>
     vorpal
-        .command('list', 'list all git tips')
-        .option('-c', 'show only commands')
+        .command('list', 'List all git tips')
+        .option('-c', 'Show only commands')
         .action(function (arg: { options: { c: boolean } }, callback) {
             allTips.forEach(tip => {
                 this.log(yellow(tip.command));

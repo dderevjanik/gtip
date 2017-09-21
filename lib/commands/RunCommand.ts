@@ -37,7 +37,7 @@ function recurPropmpt(vorpal: any, gitCommand: ParsedTip, parameters: ReadonlyAr
 
 export const runCommand = (vorpal: Vorpal, allTips: ParsedTip[], allGitCommands: string[]) =>
     vorpal
-        .command('run [command]', 'run specific git tip')
+        .command('run [command]', 'Run specific git tip')
         .autocomplete(allGitCommands)
         .action(function (arg, callback) {
             if (arg.command) {

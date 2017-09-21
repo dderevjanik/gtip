@@ -7,9 +7,6 @@ import { runCommand } from './commands/RunCommand';
 import { searchCommand } from './commands/SearchCommand';
 import { updateCommand } from './commands/UpdateCommand';
 
-// import { updateList } from './Update';
-// import { yellow, green, red, grey } from 'chalk';
-
 const tipsJSON = readFileSync('./tips.json', { encoding: 'utf-8' }).toString();
 const allTips: ParsedTip[] = JSON.parse(tipsJSON);
 const allGitCommands = allTips.map(tip => tip.command);

@@ -47,6 +47,6 @@ exports.parseTips = function (notParsedTips) {
     var tipsWithCommands = notParsedTips.map(function (tip) { return (__assign({ command: removeUnnecessaryLetters(tip.title).split(' ')
             .map(function (word) { return word
             ? upperCaseFirstLetter(word)
-            : word; }).join(''), params: getParamsFromCommand(tip.tip) }, tip)); });
+            : word; }).join(''), params: getParamsFromCommand(tip.tip), alternative: [] }, tip)); });
     return tipsWithCommands;
 };

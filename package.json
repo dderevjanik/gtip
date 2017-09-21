@@ -16,7 +16,6 @@
   "author": "Daniel Derevjanik",
   "license": "MIT",
   "devDependencies": {
-    "tldr": "^2.0.1",
     "typescript": "^2.5.2"
   },
   "dependencies": {
@@ -25,7 +24,6 @@
     "@types/node-fetch": "^1.6.7",
     "chalk": "^2.1.0",
     "fuzzysearch": "^1.0.3",
-    "g": "^2.0.1",
     "node-fetch": "^1.7.3",
     "vorpal": "^1.12.0"
   }
