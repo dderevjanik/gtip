@@ -13,6 +13,6 @@ exports.updateList = function () {
         .then(function (body) {
         var tips = JSON.parse(body);
         var parsed = Parser_1.parseTips(tips);
-        fs_1.writeFileSync('tips.json', JSON.stringify(parsed, null, 4));
+        fs_1.writeFileSync(__dirname + '/../tips.json', JSON.stringify(parsed, null, 4));
     });
 };

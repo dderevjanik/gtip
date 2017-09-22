@@ -19,10 +19,12 @@ Go to any **git** project and type to terminal `gtip`.
 Search for any git tip. You can also use autocompletion with `tab` and thanks to fuzzysearch, you can specific only first letters of words.
 
 ```
-gtip$ search [options] [query]
+gtip$ search [options] [...words]
 ```
 
 ### Run Command
+
+![command-run](./docs/run.gif)
 
 Will run git-tips command in interactive mode.
 
@@ -31,6 +33,8 @@ gtip$ run [command]
 ```
 
 ### List all available Commands
+
+![command-list](./docs/list.gif)
 
 ```
 gtip$ list [options]

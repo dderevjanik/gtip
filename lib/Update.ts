@@ -14,6 +14,6 @@ export const updateList = () => {
         .then((body) => {
             const tips: NotParsedTip[] = JSON.parse(body);
             const parsed = parseTips(tips);
-            writeFileSync('tips.json', JSON.stringify(parsed, null, 4))
+            writeFileSync(__dirname + '/../tips.json', JSON.stringify(parsed, null, 4))
         });
 };

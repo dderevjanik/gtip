@@ -4,15 +4,16 @@ var fuzzysearch = require("fuzzysearch");
 var chalk_1 = require("chalk");
 exports.searchCommand = function (vorpal, allTips) {
     return vorpal
-        .command('search [query]', 'Search for specific command')
+        .command('search [words...]', 'Search for specific command')
         .option('-c', 'Show only commands')
         .action(function (arg, callback) {
         var _this = this;
         var showOnlyCommand = arg.options && arg.options.c && (arg.options.c === true);
-        if (arg.query) {
+        if (arg.words) {
+            var query_1 = arg.words.join(' ');
             var count_1 = 0;
             allTips.forEach(function (tip) {
-                if (fuzzysearch(arg.query, tip.title)) {
+                if (fuzzysearch(query_1, tip.title)) {
                     _this.log(chalk_1.yellow(tip.command));
                     if (!showOnlyCommand) {
                         _this.log("description: " + tip.title);
