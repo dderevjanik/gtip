@@ -11,7 +11,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "nodemon --config nodemon.json"
+    "start": "nodemon --config nodemon.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Daniel Derevjanik",
   "license": "MIT",
@@ -25,6 +27,8 @@
     "chalk": "^2.1.0",
     "fuzzysearch": "^1.0.3",
     "node-fetch": "^1.7.3",
-    "vorpal": "^1.12.0"
-  }
+    "vorpal": "^1.12.0",
+    "snyk": "^1.88.0"
+  },
+  "snyk": true
 }
