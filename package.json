@@ -24,7 +24,7 @@
     "@types/node-fetch": "^1.6.7",
     "chalk": "^2.1.0",
     "fuzzysearch": "^1.0.3",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^3.2.10",
     "vorpal": "^1.12.0"
   }
 }
